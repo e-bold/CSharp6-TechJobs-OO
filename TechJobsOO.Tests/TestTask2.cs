@@ -8,7 +8,6 @@ namespace TechJobsOO.Tests
 
         // Testing Location --------------------------------------------------------
 
-        /* TODO: Task 2: Remove this line to uncomment the tests
 
         [TestMethod] //1
         public void Test_Second_Location_Constructor_Exists()
@@ -177,8 +176,6 @@ namespace TechJobsOO.Tests
             //verify output
             Assert.AreEqual(testPosition.Value.ToString(), "Quality Control", "ToString does not return same output as set value");
         }
-
-        TODO: Task 2: Remove this line to uncomment the tests */
 
     }
 }

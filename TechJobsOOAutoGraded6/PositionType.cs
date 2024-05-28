@@ -19,6 +19,20 @@ namespace TechJobsOOAutoGraded6
         }
 
         // TODO: Task 2: Add custom Equals(), GetHashCode(), and ToString() methods.
+        public override bool Equals(object obj)
+        {
+            return obj is Location location &&
+                   Id == location.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
+        public override string ToString()
+        {
+            return Value;
+        }
     }
 }
 
