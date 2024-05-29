@@ -44,7 +44,7 @@ namespace TechJobs.Tests
             //Act - Splitting the text variable by newline. It means every new lines in the text will be removed and replaced with empty string as we are separating them.
             string[] textArray = text.Split(Environment.NewLine); 
 
-            //Assert - Checking if the first and last at index equals to empty string as we removed/split the text by the new line.
+            //Assert - Checking if the first and last at index equals to empty string, since we used split method to separate it by newline(newline gets replaced by empty string).
             Assert.AreEqual(textArray[0], "");
             Assert.AreEqual(textArray[textArray.Length - 1], "");
 
@@ -56,8 +56,8 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringContainsCorrectLabelsAndData()
         {
-            Assert.IsTrue(job3.ToString().Contains("ID: "));
-            Assert.IsTrue(job3.ToString().Contains("Name: Product tester"));
+            Assert.IsTrue(job4.ToString().Contains("ID: 4"));
+            Assert.IsTrue(job4.ToString().Contains("Name: Product tester"));
             Assert.IsTrue(job4.ToString().Contains("Employer: ACME"));
             Assert.IsTrue(job4.ToString().Contains("Location: Desert"));
             Assert.IsTrue(job4.ToString().Contains("Position Type: Quality control"));
@@ -68,6 +68,7 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
+            Assert.IsTrue(job5.ToString().Contains("ID: 5"));
             Assert.IsTrue(job5.ToString().Contains("Name: Data not available"));
             Assert.IsTrue(job5.ToString().Contains("Employer: Data not available"));
             Assert.IsTrue(job5.ToString().Contains("Location: Desert"));

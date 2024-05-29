@@ -56,13 +56,12 @@ namespace TechJobsOOAutoGraded6
           
             return 
             nl 
-            + nl + "ID: " + Id 
+            + "ID: " + Id 
             + nl + "Name: " + Name1
             + nl + "Employer: " + EmployerName1
             + nl + "Location: " + EmployerLocation1
             + nl + "Position Type: " + JobType1
             + nl + "Core Competency: " + JobCoreCompetency1
-            + nl 
             + nl;
         }
     }
