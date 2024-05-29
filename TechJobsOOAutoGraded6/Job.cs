@@ -37,10 +37,29 @@ namespace TechJobsOOAutoGraded6
         public override int GetHashCode()
         {
             return HashCode.Combine(Id);
-        } 
+        }
 
         // TODO: Task 5: Generate custom ToString() method.
         //Until you create this method, you will not be able to print a job to the console.
+        public override string ToString()
+        {
+            string nl = Environment.NewLine;
+            string name = string.IsNullOrEmpty(Name) ? "Data not available" : Name;
+            string employerName = string.IsNullOrEmpty(EmployerName.ToString()) ? "Data not available" : EmployerName.ToString();
+    
+            
+
+          
+            return 
+            nl 
+            + nl + "ID: " + Id 
+            + nl + "Name: " + Name
+            + nl + "Employer: " + EmployerName
+            + nl + "Location: " + EmployerLocation
+            + nl + "Position Type: " + JobType
+            + nl + "Core Competency: " + JobCoreCompetency
+            + nl;
+        }
     }
 }
 
