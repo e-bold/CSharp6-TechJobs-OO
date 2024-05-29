@@ -44,20 +44,25 @@ namespace TechJobsOOAutoGraded6
         public override string ToString()
         {
             string nl = Environment.NewLine;
-            string name = string.IsNullOrEmpty(Name) ? "Data not available" : Name;
-            string employerName = string.IsNullOrEmpty(EmployerName.ToString()) ? "Data not available" : EmployerName.ToString();
-    
-            
 
+
+            //Ternary expression to check if the each argument data is empty. If it is empty return "Data not available" if its not return whatever the argument value is.
+            //
+            string Name1 = string.IsNullOrEmpty(Name) ? "Data not available" : Name;
+            string EmployerName1 = string.IsNullOrEmpty(EmployerName.ToString()) ? "Data not available" : EmployerName.ToString();
+            string EmployerLocation1 = string.IsNullOrEmpty(EmployerLocation.ToString()) ? "Data not available" : EmployerLocation.ToString();
+            string JobType1 = string.IsNullOrEmpty(JobType.ToString()) ? "Data not available" : JobType.ToString();
+            string JobCoreCompetency1 = string.IsNullOrEmpty(JobCoreCompetency.ToString()) ? "Data not available" : JobCoreCompetency.ToString();
           
             return 
             nl 
             + nl + "ID: " + Id 
-            + nl + "Name: " + Name
-            + nl + "Employer: " + EmployerName
-            + nl + "Location: " + EmployerLocation
-            + nl + "Position Type: " + JobType
-            + nl + "Core Competency: " + JobCoreCompetency
+            + nl + "Name: " + Name1
+            + nl + "Employer: " + EmployerName1
+            + nl + "Location: " + EmployerLocation1
+            + nl + "Position Type: " + JobType1
+            + nl + "Core Competency: " + JobCoreCompetency1
+            + nl 
             + nl;
         }
     }
